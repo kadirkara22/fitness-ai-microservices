@@ -19,7 +19,7 @@ public class ActivityMessageListener {
         this.aiService = aiService;
         this.recommendationRepository = recommendationRepository;
     }
-    @Value("${rabbitmq.queue.name}")
+   @Value("${rabbitmq.queue.name}")
     private  String queueName;
 
     @RabbitListener(queues ="activity.queue" )
